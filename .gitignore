@@ -1,0 +1,14 @@
+node_modules/*
+!node_modules/kysely-codegen/
+!node_modules/kysely-codegen/dist/
+!node_modules/kysely-codegen/dist/db.d.ts
+
+/dist
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+.env
