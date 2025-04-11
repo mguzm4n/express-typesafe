@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import routes from './routes';
 import { ResourceNotFoundError } from './errors';
+import { asyncHandler, authenticate } from './middleware';
 
 const app = express();
 
@@ -11,6 +12,9 @@ app.use(cors({
 }));
 
 app.use(express.json());
+
+// auth middleware
+// app.use(asyncHandler(authenticate));
 
 // define all routes
 app.use('/api/v1', routes);

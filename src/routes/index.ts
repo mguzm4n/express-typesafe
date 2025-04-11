@@ -1,8 +1,11 @@
 import { Router } from 'express';
-// import userRouter from './user.routes'; 
+import { coursesRouter } from './courses';
+
 const router = Router();
 
-// router.use('/users', userRouter);
+
+router.use('/courses', coursesRouter);
+
 
 router.get('/', (req, res) => {
   res.json({ message: 'API' });
